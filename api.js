@@ -6,7 +6,7 @@
  var app = express();
 
 
- app.use(exprss['static'](_dirname));
+ app.use('/',express.static(_dirname));
 
  var inputs = [    { pin: '11', gpio: '17', value: 1 },
                   { pin: '12', gpio: '18', value: 0 }
