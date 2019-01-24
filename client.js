@@ -2,16 +2,17 @@
 
 // client-side
 
-window.onload = function () {
-  var url, i;
+var request = new XMLHttpRequest();
 
-  for (i = 0; i < 2; i++) 
-  {
-    url = document.URL + 'inputs/' + i;
-    $.getJSON(url, function (data) 
+function call()
+{
+    request.open('GET', 'http://192.168.43.249:3000');
+    request.onload = function () 
     {
-      console.log('API response received');
-      $('#input').append('<p>input gpio port ' + data.gpio + ' on pin ' + data.pin + ' has current value ' + data.value + '</p>');
-    });
-  }
-};
+  
+        var data = JSON.parse(this.responseText);
+        $('#thedata').text(data);
+    }
+    request.send();
+    setInterval(call,3000);
+}
