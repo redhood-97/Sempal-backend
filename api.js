@@ -1,50 +1,19 @@
-var http = require('http');
- var express = require('express');
 
- var app = express();
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
- app.use(express['static']('sempal'));
+var request = new XMLHttpRequest();
 
- // random data generation 
- setInterval(function()
- { 
-    console.log(rnumber = Math.floor((Math.random()*100)+1));
-   
- }, 1000);
-
-// rnumber is to be shipped
-
-// define the different routes
-
- //route for a valid request
- app.get('/inputs', function(req, res) 
- {
-  res.status(200).send(rnumber);
- }
- ); 
-
- // Request error handling !!!
- //route for any other invalid request
- app.get('*', function(req, res) 
- {
-  res.status(404).send('Unrecognised API call. Try again !!!');
- }
-);
-
-
-//express route for handling errors
-app.use(function(err, req, res, next) 
+function call()
 {
-  if (req.xhr) 
-  {
-    res.status(500).send('Oops, Something went wrong !!!');
-  } 
-  else 
-  {
-    next(err);
-  }
-}
-);
+	request.open('GET','http://192.168.43.249:3000/inputs');
 
-app.listen(3000);
-console.log("App server is listening on port 3000");
+	request.onload = function () 
+    {
+    	    var data = JSON.parse(this.responseText);
+    		console.log(data);
+            $('#thedata').text(data);
+    }
+request.send();
+}
+
+setInterval(call,300);
