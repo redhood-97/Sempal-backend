@@ -6,15 +6,18 @@
 
  var app = express();
 
-
  app.use(express['static']('sempal'));
 
- setInterval(function(){ 
+ // random data generation 
+ setInterval(function()
+ { 
     console.log(rnumber = Math.floor((Math.random()*100)+1));
    
-}, 1000);
+ }, 1000);
 
 // rnumber is to be shipped
+
+// define the different routes
 
  //route for a valid request
  app.get('/inputs', function(req, res) 
@@ -23,11 +26,11 @@
  }
  ); 
 
-
+ // Request error handling !!!
  //route for any other invalid request
  app.get('*', function(req, res) 
  {
-  res.status(404).send('Unrecognised API call');
+  res.status(404).send('Unrecognised API call. Try again !!!');
  }
 );
 
@@ -37,7 +40,7 @@ app.use(function(err, req, res, next)
 {
   if (req.xhr) 
   {
-    res.status(500).send('Oops, Something went wrong!');
+    res.status(500).send('Oops, Something went wrong !!!');
   } 
   else 
   {
