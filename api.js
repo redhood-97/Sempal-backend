@@ -26,8 +26,10 @@ io.on('connection', function(socket)
 setInterval(function() 
 {
   var voltage = Math.floor(Math.random() * (max - min) * 100);
+  var current = Math.floor(Math.random() * (max - min) * 100);
 
   io.emit('Voltage value latest : ', voltage);
+  io.emit('Current value latest : ', current);
 }, 200);
 
 http.listen(port, function() 
