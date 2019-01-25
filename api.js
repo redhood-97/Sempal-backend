@@ -13,7 +13,7 @@ const port = 3000;
 
 app.get('/', function(req, res) 
 {
-  res.sendFile('index.html');
+  res.sendFile(path.join('sempal','/public','/index.html'));
 });
 
 io.on('connection', function(socket)
