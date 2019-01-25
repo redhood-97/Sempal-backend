@@ -13,7 +13,7 @@ const port = 3000;
 
 app.get('/', function(req, res) 
 {
-  res.sendFile('public' + '/index.html');
+  res.sendFile('public/index.html', {root : sempal} );
 });
 
 io.on('connection', function(socket)
@@ -30,5 +30,5 @@ setInterval(function()
 
 http.listen(port, function() 
 {
-  console.log('Server listening on : ${port}');
+  console.log('Server listening on : ' + port);
 });
