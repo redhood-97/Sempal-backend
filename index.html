@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sempal</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    	$(function () 
+    	{
+        	var socket = io();  // an event-listener for the socket
+        	socket.on('Voltage value latest : ', function(voltage) 
+        	{
+          		$('#voltage').text(voltage);
+        	});
+      });
+    </script>
+  </head>
+  <body>
+    The voltage : <span id="voltage">no data yet</span>
+  </body>
+</html>
