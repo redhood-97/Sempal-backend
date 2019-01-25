@@ -4,6 +4,8 @@ var app = require('express')();
 
 var http = require('http').Server(app);
 
+var path = require('path');
+
 var io = require('socket.io')(http);
 
 const min = 0;
