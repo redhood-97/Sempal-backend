@@ -17,6 +17,11 @@
           		$('#voltage').text(voltage);
         	});
 
+        	socket.on('Current value latest : ', function(current) 
+        	{
+          		$('#current').text(current);
+        	});
+
       });
     </script>
   </head>
@@ -25,6 +30,8 @@
   		<div class = "card-item">
   			<img src = "" alt = "">
 			<p>The voltage : <span id="voltage">no data yet</span></p>
+			<br>
+			<p>The current : <span id="current">no data yet</span></p>
 		</div>
 	</div>
   </body>
