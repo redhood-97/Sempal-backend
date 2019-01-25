@@ -1,19 +1,34 @@
+// Server side script
 
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var app = require('express')();
 
-var request = new XMLHttpRequest();
+var http = require('http').Server(app);
 
-function call()
+var io = require('socket.io')(http);
+
+const min = 0;
+const max = 20;
+
+const port = 3000;
+
+app.get('/', function(req, res) 
 {
-	request.open('GET','http://192.168.43.249:3000/inputs');
+  res.sendFile('public' + '/index.html');
+});
 
-	request.onload = function () 
-    {
-    	    var data = JSON.parse(this.responseText);
-    		console.log(data);
-            $('#thedata').text(data);
-    }
-request.send();
-}
+io.on('connection', function(socket)
+{
+	console.log('New WS connection successfully established !!!')
+});
 
-setInterval(call,300);
+setInterval(function() 
+{
+  var voltage = Math.floor(Math.random() * (max - min) * 100);
+
+  io.emit('Voltage value latest : ', voltage);
+}, 200);
+
+http.listen(port, function() 
+{
+  console.log('Server listening on : ${port}');
+});
