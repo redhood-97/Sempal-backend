@@ -1,6 +1,96 @@
-.card{
-	margin: 30px;
-	width: 327px;
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+.header{
+	text-align:left;
+	background:#0d47a1;
+	margin-bottom: 10px;
+	height: 100px;
+	padding: -80px;
+	margin-top: 0px;
+	box-sizing: border-box;
+}
+
+.header-text{
+	color: white;
+	font-family: 'PT Sans', sans-serif;
+	padding-top: -20px;
+	padding-left: 15px;
+	font-size: 50px;
+}
+
+#data-wrapper{
+	display: table;
+	width: 1283px;
+	overflow: hidden;
+}
+
+#row{
+	display: table-row;
+}
+
+#voltage-tab-wrapper{
+	display: table-cell;
+	background-color: #f44336; 
+	width: 425px;
 	height: 300px;
-	background-color: blue;
+	margin-right: 5px;
+	overflow: hidden;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+#voltage-data{
+	color:white;
+	padding-top: 12px;
+	font-family: 'Cabin', sans-serif;
+	padding-left: 10px;
+}
+
+#voltage-data-number{
+	font-family: 'Orbitron', sans-serif;
+}
+
+#current-tab-wrapper{
+	display: table-cell;
+	background-color: #6a1b9a ;
+	width: 430px;
+	height: 300px;
+	overflow: hidden;
+	font-size: 20px;
+	box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#current-data{
+	color: white;
+	font-family: 'Cabin', sans-serif;
+	padding-top: 12px;
+	padding-left: 10px;
+}
+
+#current-data-number{
+	font-family: 'Orbitron', sans-serif;
+}
+
+#frequency-tab-wrapper{
+	display: table-cell;
+	background-color: #1de9b6;
+	width: 425px;
+	height: 300px;
+	overflow: hidden;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+#frequency-data{
+	color: white;
+	padding-top: 12px;
+	padding-left: 10px;
+	font-family: 'Cabin', sans-serif;
+}
+
+#frequency-data-number{
+	font-family: 'Orbitron', sans-serif;
 }
