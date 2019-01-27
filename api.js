@@ -10,6 +10,7 @@ var io = require('socket.io')(http);
 
 const min = 0;
 const max = 20;
+const min_freq = 50;
 
 const port = 3000;
 
@@ -27,9 +28,11 @@ setInterval(function()
 {
   var voltage = Math.floor(Math.random() * (max - min) * 100);
   var current = Math.floor(Math.random() * (max - min) * 100);
+  var frequency = min_freq - Math.random();
 
   io.emit('Voltage value latest : ', voltage);
   io.emit('Current value latest : ', current);
+  io.emit('Frequency value latest : ', frequency);
 }, 200);
 
 http.listen(port, function() 
