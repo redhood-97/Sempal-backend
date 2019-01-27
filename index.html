@@ -22,6 +22,11 @@
           		$('#current').text(current);
         	});
 
+        	socket.on('Frequency value latest :', function(frequency)
+        	{
+        		$('#frequency').text(frequency);
+        	});
+
       });
     </script>
   </head>
@@ -32,6 +37,8 @@
 			<p>The voltage : <span id="voltage">no data yet</span></p>
 			<br>
 			<p>The current : <span id="current">no data yet</span></p>
+			<br>
+			<p>The frequency : <span id="frequency">no data yet</span></p>
 		</div>
 	</div>
   </body>
