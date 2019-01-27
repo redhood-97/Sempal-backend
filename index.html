@@ -3,9 +3,10 @@
 <html>
   <head>
     <title>Sempal</title>
-     <link rel="stylesheet" type="text/css" href="styles.css">
+     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Exo:300" rel="stylesheet" />
     <script>
     	$(function () 
     	{
@@ -31,15 +32,41 @@
     </script>
   </head>
   <body>
-  	<div class = "card">
-  		<div class = "card-item">
-  			<img src = "" alt = "">
-			<p>The voltage : <span id="voltage">no data yet</span></p>
-			<br>
-			<p>The current : <span id="current">no data yet</span></p>
-			<br>
-			<p>The frequency : <span id="frequency">no data yet</span></p>
-		</div>
-	</div>
+  		<div class="header">
+  			<div class="header-text">
+  				<p> SEMPAL </p><br>
+  			</div>
+  		</div>
+  		<div id="data-wrapper">
+  			<div id="row">
+  				<div id="voltage-tab-wrapper">
+  					<div id="voltage-data">
+						<p>Voltage : 
+							<div id="voltage-data-number">	<span id="voltage">no data yet</span>
+							</div>
+						</p>
+						<br>
+					</div>
+				</div>
+				<div id="current-tab-wrapper">
+					<div id ="current-data">
+						<p>Current : 
+							<div id="current-data-number">	<span id="current">no data yet</span>
+							</div>
+						</p>
+						<br>
+					</div>
+				</div>
+				<div id="frequency-tab-wrapper">
+					<div id="frequency-data">
+						<p>Frequency :
+							<div id="frequency-data-number"> 
+								<span id="frequency">no data yet</span>
+							</div>
+						</p>
+						<br>
+					</div>
+				</div>
+	
   </body>
 </html>
