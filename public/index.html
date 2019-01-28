@@ -3,8 +3,11 @@
 <html>
   <head>
     <title>Sempal</title>
+     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Exo:300" rel="stylesheet" />
     <script>
     	$(function () 
     	{
@@ -16,10 +19,193 @@
           		$('#voltage').text(voltage);
         	});
 
-      });
+        	socket.on('Current value latest : ', function(current) 
+        	{
+          		$('#current').text(current);
+        	});
+
+        	socket.on('Frequency value latest :', function(frequency)
+        	{
+        		$('#frequency').text(frequency);
+        	});
+        });
     </script>
+
+   	<script>
+   		window.onload = function () {
+
+		var dps = []; // dataPoints
+		var chart = new CanvasJS.Chart("voltage-container", {
+					axisY: {
+					includeZero: false
+					},      
+					data: [{
+					type: "line",
+					dataPoints: dps
+					}]
+			});
+
+		var xVal = 0;
+		var yVal = voltage; 
+		var updateInterval = 1000;
+		var dataLength = 100; // number of dataPoints visible at any point
+
+		var updateChart = function (count) {
+
+		count = count || 1;
+
+		for (var j = 0; j < count; j++) {
+		yVal = voltage;
+		dps.push({
+			x: xVal,
+			y: yVal
+		});
+		xVal++;
+		}
+
+		if (dps.length > dataLength) {
+		   dps.shift();
+	    }
+
+		chart.render();
+		};
+
+		updateChart(dataLength);
+		setInterval(function(){updateChart()}, updateInterval);
+
+		}
+   	</script>
+   	<script>
+   		window.onload = function () {
+
+		var dps = []; // dataPoints
+		var chart = new CanvasJS.Chart("current-container", {
+					axisY: {
+					includeZero: false
+					},      
+					data: [{
+					type: "line",
+					dataPoints: dps
+					}]
+			});
+
+		var xVal = 0;
+		var yVal = current; 
+		var updateInterval = 1000;
+		var dataLength = 100; // number of dataPoints visible at any point
+
+		var updateChart = function (count) {
+
+		count = count || 1;
+
+		for (var j = 0; j < count; j++) {
+		yVal = current;
+		dps.push({
+			x: xVal,
+			y: yVal
+		});
+		xVal++;
+		}
+
+		if (dps.length > dataLength) {
+		   dps.shift();
+	    }
+
+		chart.render();
+		};
+
+		updateChart(dataLength);
+		setInterval(function(){updateChart()}, updateInterval);
+
+		}
+	</script>
+	<script>
+   		window.onload = function () {
+
+		var dps = []; // dataPoints
+		var chart = new CanvasJS.Chart("frequency-container", {
+					axisY: {
+					includeZero: false
+					},      
+					data: [{
+					type: "line",
+					dataPoints: dps
+					}]
+			});
+
+		var xVal = 0;
+		var yVal = frequency; 
+		var updateInterval = 1000;
+		var dataLength = 100; // number of dataPoints visible at any point
+
+		var updateChart = function (count) {
+
+		count = count || 1;
+
+		for (var j = 0; j < count; j++) {
+		yVal = frequency;
+		dps.push({
+			x: xVal,
+			y: yVal
+		});
+		xVal++;
+		}
+
+		if (dps.length > dataLength) {
+		   dps.shift();
+	    }
+
+		chart.render();
+		};
+
+		updateChart(dataLength);
+		setInterval(function(){updateChart()}, updateInterval);
+
+		}
+	</script>
   </head>
   <body>
-    The voltage : <span id="voltage">no data yet</span>
+  		<div class="header">
+  			<div class="header-text">
+  				<p> SEMPAL </p><br>
+  			</div>
+  		</div>
+  		<div id="data-wrapper">
+  			<div id="row">
+  				<div id="voltage-tab-wrapper">
+  					<div id="voltage-data">
+						<p>Voltage : 
+							<div id="voltage-data-number">	<span id="voltage">no data yet</span>
+							</div>
+						</p>
+						<br>
+					</div>
+					<div id="voltage-container" style="height: 150px; width: 280px;">
+					</div>
+				</div>
+				<div id="current-tab-wrapper">
+					<div id ="current-data">
+						<p>Current : 
+							<div id="current-data-number">	<span id="current">no data yet</span>
+							</div>
+						</p>
+						<br>
+					</div>
+					<div id="current-container" style="height: 150px; width: 280px;">
+					</div>
+				</div>
+				<div id="frequency-tab-wrapper">
+					<div id="frequency-data">
+						<p>Frequency :
+							<div id="frequency-data-number"> 
+								<span id="frequency">no data yet</span>
+							</div>
+						</p>
+						<br>
+					</div>
+					<div id="frequency-container" style="height: 150px; width: 280px;">
+					</div>
+				</div>
+	
   </body>
 </html>
