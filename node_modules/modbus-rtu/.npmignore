@@ -1,0 +1,11 @@
+src
+tests
+node_modules
+.babelrc
+.eslintignore
+.eslintrc.yml
+.gitignore
+.travis.yml
+package-lock.json
+examples
+.idea

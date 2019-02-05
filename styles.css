@@ -1,23 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+
 
 .header{
 	text-align:left;
-	background:#0d47a1;
+	background-image : linear-gradient(to right, #1a237e, #303f9f, #3f51b5, #7986cb);
 	margin-bottom: 10px;
 	height: 100px;
-	padding: -80px;
+	padding: 0px;
 	margin-top: 0px;
 	box-sizing: border-box;
 }
 
 .header-text{
 	color: white;
-	font-family: 'PT Sans', sans-serif;
-	padding-top: -20px;
-	padding-left: 15px;
-	font-size: 50px;
+	font-family: 'Staatliches', cursive;
+	padding-top: 0px; /* -20px */
+	padding-left: 15px; 
+	font-size: 80px;
 }
 
 #data-wrapper{
@@ -31,11 +35,10 @@
 }
 
 #voltage-tab-wrapper{
-	display: table-cell;
-	background-color: #f44336; 
+	display: table-cell; 
+	background-image : linear-gradient(to right, #c62828, #d32f2f, #f44336, #e57373, #ef9a9a);
 	width: 425px;
 	height: 300px;
-	margin-right: 5px;
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
@@ -46,20 +49,20 @@
 	padding-top: 12px;
 	font-family: 'Cabin', sans-serif;
 	padding-left: 10px;
+	font-size: 20px;
 }
 
-#voltage-data-number{
+#voltage_log{
 	font-family: 'Orbitron', sans-serif;
 }
 
 #current-tab-wrapper{
 	display: table-cell;
-	background-color: #6a1b9a ;
+	background-image: linear-gradient(to right, #6a1b9a, #8e24aa, #ab47bc, #ba68c8, #ce93d8);
 	width: 430px;
 	height: 300px;
 	overflow: hidden;
 	font-size: 20px;
-	box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -70,14 +73,14 @@
 	padding-left: 10px;
 }
 
-#current-data-number{
+#current_log{
 	font-family: 'Orbitron', sans-serif;
 }
 
 #frequency-tab-wrapper{
 	display: table-cell;
-	background-color: #1de9b6;
-	width: 425px;
+	background-image : linear-gradient(to right, #00838f, #0097a7, #00acc1, #00bcd4, #26c6da, #4dd0e1, #80deea);
+	width: 400px;
 	height: 300px;
 	overflow: hidden;
 	font-size: 20px;
@@ -91,6 +94,126 @@
 	font-family: 'Cabin', sans-serif;
 }
 
-#frequency-data-number{
+#frequency_log{
 	font-family: 'Orbitron', sans-serif;
 }
+
+.load-status-header{
+	background-image: linear-gradient(to right, #e65100, #ef6c00, #f57c00, #fb8c00, #ff9800, #ffb74d);
+	margin-top: 10px;
+	height : 60px;
+	padding : 0px;
+	text-align: center;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+.load-status-header-text{
+	font-family: 'Fjalla One', sans-serif;
+	color : white;
+	font-size: 40px;
+	margin-bottom: 4px;
+}
+
+#load-source-wrapper{
+	display: table;
+	width: 1283px;
+	overflow: hidden;
+}
+
+#load-row{
+	display: table-row;
+}
+
+#first-load{
+	display: table-cell; 
+	background-image : linear-gradient(to right, #64dd17, #76ff03, #b2ff59, #ccff90);
+	width: 320px;
+	height: 200px;
+	overflow: hidden;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+#first-load-name{
+	color:white;
+	padding-top: 12px;
+	font-family: 'Cabin', sans-serif;
+	padding-left: 10px;
+	font-size: 20px;
+}
+
+#first-load-status{
+	font-family: 'Orbitron', sans-serif;
+}
+
+#second-load{
+	display: table-cell; 
+	background-image : linear-gradient(to right, #ffd600, #ffea00, #ffff00, #ffff8d);
+	width: 310px;
+	height: 200px;
+	margin-right: 10px;
+	overflow: hidden;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+#second-load-name{
+	color:white;
+	padding-top: 12px;
+	font-family: 'Cabin', sans-serif;
+	padding-left: 10px;
+	font-size: 20px;
+}
+
+#second-load-status{
+	font-family: 'Orbitron', sans-serif;
+}
+
+#third-load{
+	display: table-cell; 
+	background-image : linear-gradient(to right, #aeea00, #c6ff00, #eeff41, #f4ff81);
+	width: 320px;
+	height: 200px;
+	margin-right: 10px;
+	overflow: hidden;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+#third-load-name{
+	color:white;
+	padding-top: 12px;
+	font-family: 'Cabin', sans-serif;
+	padding-left: 10px;
+	font-size: 20px;
+}
+
+#third-load-status{
+	font-family: 'Orbitron', sans-serif;
+}
+
+#fourth-load{
+	display: table-cell; 
+	background-image : linear-gradient(to right, #00695c, #00796b, #00897b, #009688, #26a69a, #80cbc4, #b2dfdb);
+	width: 322px;
+	height: 200px;
+	margin-right: 10px;
+	overflow: hidden;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+#fourth-load-name{
+	color:white;
+	padding-top: 12px;
+	font-family: 'Cabin', sans-serif;
+	padding-left: 10px;
+	font-size: 20px;
+}
+
+#fourth-load-status{
+	font-family: 'Orbitron', sans-serif;
+}
+
+

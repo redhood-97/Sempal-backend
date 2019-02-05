@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sempal</title>
+    <!--
+    <script src="jquery-2.1.4.js"></script>
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<!--
+    <script src="/socket.io/socket.io.js"></script>
+  	-->
+  	<!--
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js">--></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="text/javascript" src="scripts/app.js" charset="utf-8">
+    </script>
+	<!--
+	<script data-main="scripts/app" src="scripts/require.js"></script>
+    -->
+    <!--
+    <script type="text/javascript">
+   
+    </script>
+	-->
+   	
+  </head>
+  <body>
+  		<div class="header">
+  			<div class="header-text">
+  				<p> SEMPAL </p><br>
+  			</div> 
+  		</div>
+  		<div id="data-wrapper">
+  			<div id="row">
+  				<div id="voltage-tab-wrapper">
+  					<div id="voltage-data">
+						<p>Voltage : 
+							<div id="voltage-data-number">	<span id="voltage_log"><b>no data yet</b></span>
+								<b>
+							<span id="voltage_unit">    V</span> 
+								</b>
+							</div>
+						</p>
+						<br>
+					</div>
+					<div id="voltage-container" style="height: 150px; width: 280px;">
+					</div>
+				</div>
+				<div id="current-tab-wrapper">
+					<div id ="current-data">
+						<p>Current : 
+							<div id="current-data-number">	<span id="current_log"><b>no data yet</b></span>
+								<b>
+							<span id="current_unit">    A</span>
+								</b>
+							</div>
+						</p>
+						<br>
+					</div>
+					<div id="current-container" style="height: 150px; width: 280px;">
+					</div>
+				</div>
+				<div id="frequency-tab-wrapper">
+					<div id="frequency-data">
+						<p>Frequency :
+							<div id="frequency-data-number"> 
+								<span id="frequency_log"><b>no data yet</b></span>
+								<span id="frequency_unit">    <b>Hz</b></span>
+							</div>
+						</p>
+						<br>
+					</div>
+					<div id="frequency-container" style="height: 150px; width: 280px;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="load-status-header">
+			<div class="load-status-header-text"> Load status
+			</div>
+		</div>
+		<div id="load-status-wrapper">
+			<div id="load-row">
+				<div id="first-load">
+					<div id="first-load-name">
+						<p> Load 1
+						</p>
+						<div id="first-load-status">
+							<p> ON
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="second-load">
+					<div id="second-load-name">
+						<p> Load 2
+						</p>
+						<div id="second-load-status">
+							<p> OFF
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="third-load">
+					<div id="third-load-name">
+						<p> Load 3
+						</p>
+						<div id="third-load-status">
+							<p> ON
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="fourth-load">
+					<div id="fourth-load-name">
+						<p> Load 4
+						</p>
+						<div id="fourth-load-status">
+							<p> OFF
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  
+	
+  </body>
+</html>

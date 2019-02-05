@@ -1,0 +1,18 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var FUNCTION_CODES = exports.FUNCTION_CODES = {
+    READ_COILS: 1,
+    READ_DISCRETE_INPUTS: 2,
+    READ_HOLDING_REGISTERS: 3,
+    READ_INPUT_REGISTERS: 4,
+    WRITE_SINGLE_COIL: 5,
+    WRITE_SINGLE_REGISTER: 6,
+    WRITE_MULTIPLE_COILS: 15,
+    WRITE_MULTIPLE_REGISTERS: 16
+};
+var DEFAULT_RETRY_COUNT = exports.DEFAULT_RETRY_COUNT = 10;
+var RESPONSE_TIMEOUT = exports.RESPONSE_TIMEOUT = 500;
+var QUEUE_TIMEOUT = exports.QUEUE_TIMEOUT = 50;
