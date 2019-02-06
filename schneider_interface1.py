@@ -1,4 +1,4 @@
-
+import pyModbusTCP
 from pyModbusTCP.client import ModbusClient
 from pyModbusTCP import utils
 import time
@@ -104,7 +104,7 @@ def send_data():
                                     "apparent_power_rating" : apparent_power_a,
                                     "frequency_reading" : freq
                         }
-                        print data
+                        print (data)
                         return data
         #decision(<some parameters>)
 
