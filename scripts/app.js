@@ -3,7 +3,7 @@
   //  var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
     var request = new XMLHttpRequest();
     function call() {
-        request.open('GET', 'http://localhost:8080/watch', true);
+        request.open('GET', 'http://192.168.43.249:8080/watch', true);
         request.onload = function () {
         // console.log(this.responseText);
         var data = JSON.parse(this.responseText);
