@@ -22,6 +22,8 @@
 	padding-top: 0px; /* -20px */
 	padding-left: 15px; 
 	font-size: 80px;
+	text-shadow : 4px 4px 4px #00e5ff;
+
 }
 
 
@@ -50,6 +52,9 @@ body{
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
+	outline-style: solid;
+	outline-color: black;
+	border : 4px solid black;
 	
 }
 
@@ -58,12 +63,17 @@ body{
 	padding-top: 12px;
 	font-family: 'Cabin', sans-serif;
 	padding-left: 10px;
-	font-size: 20px;
+	font-size: 22px;
 }
 
 #voltage_log{
 	font-family: 'Viga', sans-serif;
-	font-size: 25px;
+	font-size: 26px;
+	text-shadow : 3px 3px black;
+}
+
+#voltage_unit{
+	text-shadow: 2px 2px red;
 }
 
 #current-tab-wrapper{
@@ -74,6 +84,9 @@ body{
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
+	outline-style: solid;
+	outline-color: black;
+	border : 4px solid black;
 }
 
 #current-data{
@@ -81,11 +94,13 @@ body{
 	font-family: 'Cabin', sans-serif;
 	padding-top: 12px;
 	padding-left: 10px;
+	font-size: 22px;
 }
 
 #current_log{
 	font-family: 'Viga', sans-serif;
-	font-size: 25px;
+	font-size: 26px;
+	text-shadow : 3px 3px black;
 }
 
 #frequency-tab-wrapper{
@@ -96,6 +111,9 @@ body{
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
+	outline-style: solid;
+	outline-color: black;
+	border : 4px solid black;
 }
 
 #frequency-data{
@@ -103,11 +121,13 @@ body{
 	padding-top: 12px;
 	padding-left: 10px;
 	font-family: 'Cabin', sans-serif;
+	font-size: 22px;
 }
 
 #frequency_log{
 	font-family: 'Viga', sans-serif;
-	font-size: 25px;
+	font-size: 26px;
+	text-shadow : 3px 3px black;
 }
 
 .load-status-header{
@@ -125,6 +145,7 @@ body{
 	color : white;
 	font-size: 40px;
 	margin-bottom: 4px;
+	text-shadow: 3px 3px #e65100;
 }
 
 #load-status-wrapper{
@@ -146,6 +167,10 @@ body{
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
+	box-sizing: border-box;
+	outline-style: solid;
+	outline-color: black;
+	border : 3px solid black;
 }
 
 #first-load-name{
@@ -154,10 +179,12 @@ body{
 	font-family: 'Cabin', sans-serif;
 	padding-left: 10px;
 	font-size: 20px;
+	text-shadow : 2px 2px 2px black;
 }
 
 #first-load-status{
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Viga', sans-serif;
+	text-shadow : 2px 2px 2px black;
 }
 
 #second-load{
@@ -169,6 +196,9 @@ body{
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
+	outline-style: solid;
+	outline-color: black;
+	border : 3px solid black;
 }
 
 #second-load-name{
@@ -177,10 +207,12 @@ body{
 	font-family: 'Cabin', sans-serif;
 	padding-left: 10px;
 	font-size: 20px;
+	text-shadow : 2px 2px 2px black;
 }
 
 #second-load-status{
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Viga', sans-serif;
+	text-shadow : 2px 2px 2px black;
 }
 
 #third-load{
@@ -192,6 +224,9 @@ body{
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
+	outline-style: solid;
+	outline-color: black;
+	border : 3px solid black;
 }
 
 #third-load-name{
@@ -200,10 +235,12 @@ body{
 	font-family: 'Cabin', sans-serif;
 	padding-left: 10px;
 	font-size: 20px;
+	text-shadow : 2px 2px 2px black;
 }
 
 #third-load-status{
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Viga', sans-serif;
+	text-shadow : 2px 2px 2px black;
 }
 
 #fourth-load{
@@ -215,6 +252,9 @@ body{
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
+	outline-style: solid;
+	outline-color: black;
+	border : 3px solid black;
 }
 
 #fourth-load-name{
@@ -223,10 +263,12 @@ body{
 	font-family: 'Cabin', sans-serif;
 	padding-left: 10px;
 	font-size: 20px;
+	text-shadow : 2px 2px 2px black;
 }
 
 #fourth-load-status{
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Viga', sans-serif;
+	text-shadow : 2px 2px 2px black;
 }
 
 
