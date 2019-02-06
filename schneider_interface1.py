@@ -1,4 +1,4 @@
-import pyModbusTCP
+iimport pyModbusTCP
 from pyModbusTCP.client import ModbusClient
 from pyModbusTCP import utils
 import time
@@ -31,7 +31,6 @@ app = Flask(__name__)
 cors = CORS(app)
 api = Api(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-
 @app.route('/page')
 def index():
     return render_template('index1.html')
