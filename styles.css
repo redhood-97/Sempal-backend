@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
-
-
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Viga');
 
 .header{
 	text-align:left;
@@ -24,9 +24,17 @@
 	font-size: 80px;
 }
 
+
+body{
+    background-color:black;
+   /* background-repeat:repeat; */
+    margin: 0;
+}
+
+
 #data-wrapper{
 	display: table;
-	width: 1283px;
+	width: 1287px;
 	overflow: hidden;
 }
 
@@ -42,6 +50,7 @@
 	overflow: hidden;
 	font-size: 20px;
 	box-sizing: border-box;
+	
 }
 
 #voltage-data{
@@ -53,7 +62,8 @@
 }
 
 #voltage_log{
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Viga', sans-serif;
+	font-size: 25px;
 }
 
 #current-tab-wrapper{
@@ -74,7 +84,8 @@
 }
 
 #current_log{
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Viga', sans-serif;
+	font-size: 25px;
 }
 
 #frequency-tab-wrapper{
@@ -95,7 +106,8 @@
 }
 
 #frequency_log{
-	font-family: 'Orbitron', sans-serif;
+	font-family: 'Viga', sans-serif;
+	font-size: 25px;
 }
 
 .load-status-header{
@@ -115,10 +127,11 @@
 	margin-bottom: 4px;
 }
 
-#load-source-wrapper{
-	display: table;
-	width: 1283px;
+#load-status-wrapper{
+	display: table-cell;
+	width: 1297px;
 	overflow: hidden;
+	box-sizing: border-box;
 }
 
 #load-row{
@@ -150,7 +163,7 @@
 #second-load{
 	display: table-cell; 
 	background-image : linear-gradient(to right, #ffd600, #ffea00, #ffff00, #ffff8d);
-	width: 310px;
+	width: 330px;
 	height: 200px;
 	margin-right: 10px;
 	overflow: hidden;
@@ -173,7 +186,7 @@
 #third-load{
 	display: table-cell; 
 	background-image : linear-gradient(to right, #aeea00, #c6ff00, #eeff41, #f4ff81);
-	width: 320px;
+	width: 335px;
 	height: 200px;
 	margin-right: 10px;
 	overflow: hidden;
@@ -196,7 +209,7 @@
 #fourth-load{
 	display: table-cell; 
 	background-image : linear-gradient(to right, #00695c, #00796b, #00897b, #009688, #26a69a, #80cbc4, #b2dfdb);
-	width: 322px;
+	width: 342px;
 	height: 200px;
 	margin-right: 10px;
 	overflow: hidden;

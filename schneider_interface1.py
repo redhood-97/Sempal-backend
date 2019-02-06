@@ -1,4 +1,4 @@
-iimport pyModbusTCP
+import pyModbusTCP
 from pyModbusTCP.client import ModbusClient
 from pyModbusTCP import utils
 import time
